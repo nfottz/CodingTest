@@ -1,16 +1,16 @@
+import java.util.*;
+
 class Solution {
     public long solution(int a, int b) {
         long answer = 0;
-        if(a > b) {
-            for(int i = b; i <= a; i++){
-                answer += i;
-            }
-        } else if(a < b){
-            for(int i = a; i <= b; i++){
-                answer += i;
-            }
+        int min = Math.min(a, b);
+        int max = Math.max(a, b);
+        if(min == max) {
+            answer = min;
         } else {
-            answer = a;
+            for(int i = min; i <= max; i++){
+                answer += i;
+            }
         }
         return answer;
     }
