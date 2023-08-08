@@ -17,7 +17,7 @@ class Solution {
         
         // 기약분수의 분모 구하기
         double denom = b / gcd;
-        
+
         // 1000 이하의 소수 구하기
         List<Integer> prime = new ArrayList<>();
         for(int x = 2; x <= 1000; x++){
