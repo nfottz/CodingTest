@@ -1,5 +1,3 @@
-// import java.util.*;
-
 class Solution {
     public int solution(int a, int b) {
         
@@ -23,8 +21,7 @@ class Solution {
             denom /= 5;
         }
         
-        int answer = 1;
-        if(denom != 1) answer = 2;
+        int answer = denom == 1? 1 : 2;
         
         return answer;
     }
