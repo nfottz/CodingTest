@@ -31,22 +31,16 @@ class Solution {
                 case "D" : scores[i] = scores[i] * scores[i]; break;
                 case "T" : scores[i] = scores[i] * scores[i] * scores[i]; break;
             }
-            if(i == 0){
-                if(option[i] != null){
-                    if(option[i].equals("*")) scores[i] *= 2;
-                    if(option[i].equals("#")) scores[i] *= -1;
-                }
-            } else {
-                if(option[i] != null){
-                    if(option[i].equals("*")) {
-                        scores[i] *= 2;
-                        scores[i - 1] *= 2;
-                    } if(option[i].equals("#")) {
-                        scores[i] *= -1;
-                    }
+            if(option[i] != null){
+                if(option[i].equals("*")){
+                    scores[i] *= 2;
+                    if(i != 0) scores[i - 1] *= 2;
+                } else if(option[i].equals("#")){
+                    scores[i] *= -1;
                 }
             }
         }
+        
         int answer = 0;
         for(int i = 0; i < 3; i++){
             answer += scores[i];
