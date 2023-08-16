@@ -1,5 +1,3 @@
-import java.util.*;
-
 class Solution {
     public int[] solution(String[] keymap, String[] targets) {
         int[] answer = new int[targets.length];
@@ -13,11 +11,9 @@ class Solution {
             }
             key[i] = min + 1;
         }
-        System.out.println(Arrays.toString(key));
         for(int i = 0, length = targets.length; i < length; i++){
             for(int j = 0, size = targets[i].length(); j < size; j++){
                 int temp = (int)targets[i].charAt(j) - 65;
-                System.out.println(temp);
                 if(key[temp] == 101){
                     answer[i] = -1; break;
                 } else {
