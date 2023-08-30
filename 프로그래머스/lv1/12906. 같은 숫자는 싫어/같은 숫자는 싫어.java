@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class Solution {
-    public int[] solution(int []arr) {        
+    public int[] solution(int[] arr) {
         Stack<Integer> st = new Stack<>();
         for(int i = 0, length = arr.length; i < length; i++){
             if(st.isEmpty() || st.peek() != arr[i]) st.push(arr[i]);
